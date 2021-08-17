@@ -1,0 +1,28 @@
+type Cor {
+    id:ID
+    classeCor:String
+    descCor: String
+    ano: String
+    lazzurilCode: Float
+    uniCode: Float
+    montadora: String
+}
+
+type Query {
+
+    cor(id:ID):Cor
+    cores:[Cor]
+}
+
+type Mutation{
+    saveCor(
+        id:ID,
+        classeCor:String,
+        descCor:String,
+        ano:String,
+        lazzurilCode:Float,
+        uniCode:Float,
+        montadora:String):Cor
+
+    deleteCor(id:ID):Boolean
+}

@@ -1,0 +1,9 @@
+
+0
+java:S1220""Move this file to a named package.
+Z
+java:S1128"=Remove this unused import 'javax.persistence.GenerationType'.(ı÷õ¡8ÛÏµü´/
+Z
+java:S1128"=Remove this unused import 'javax.persistence.GeneratedValue'.(¤®À‚8ÛÏµü´/
+N
+java:S1128	"1Remove this unused import 'javax.persistence.Id'.(ş¹ŞÜ8ÛÏµü´/
