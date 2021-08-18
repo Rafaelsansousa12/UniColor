@@ -1,0 +1,26 @@
+type Carro {
+    id:ID
+    modelo:String
+    fabricante: String
+    ano: String
+    codigo: Float
+    corId: Float
+}
+
+extend type Query {
+
+    carro(id:ID):Carro
+    carros:[Carro]
+}
+
+extend type Mutation{
+    saveCarro(
+        id:ID,
+        modelo:String,
+        fabricante: String,
+        ano: String,
+        codigo: Float,
+        corId: Float):Carro
+
+    deleteCarro(id:ID):Boolean
+}

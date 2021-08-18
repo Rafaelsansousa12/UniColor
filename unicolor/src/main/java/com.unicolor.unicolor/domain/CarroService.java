@@ -2,26 +2,27 @@ package com.unicolor.unicolor.domain;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
-public class CorService {
+public class CarroService {
 
     @Autowired
-    private CorRepository rep;
+    private CarroRepository rep;
 
-    public Cor findById(Long id){
+    public Carro findById(Long id){
         return rep.findById(id).orElse(null);
     }
 
-    public List<Cor> findAll(){
+    public List<Carro> findAll(){
         return rep.findAll();
     }
 
     @Transactional
-    public Cor save(Cor cor){
-        return rep.save(cor);
+    public Carro save(Carro carro){
+        return rep.save(carro);
     }
 
     @Transactional

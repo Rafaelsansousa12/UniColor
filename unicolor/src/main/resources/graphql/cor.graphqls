@@ -8,13 +8,13 @@ type Cor {
     montadora: String
 }
 
-type Query {
+extend type Query {
 
     cor(id:ID):Cor
     cores:[Cor]
 }
 
-type Mutation{
+extend type Mutation{
     saveCor(
         id:ID,
         classeCor:String,

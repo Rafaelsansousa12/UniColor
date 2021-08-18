@@ -12,9 +12,9 @@ import java.util.List;
 public class CorResolver implements GraphQLResolver<Cor>  {
 
     @Autowired
-    private CorService corService;
+    private CorService service;
 
     public List<Cor> cores(){
-        return corService.findAll();
+        return service.findAll();
     }
 }

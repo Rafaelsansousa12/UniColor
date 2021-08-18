@@ -8,10 +8,21 @@ create table cor (
     MONTADORA  varchar(255) null
 );
 
-drop table cor;
+create table carro (
+    ID    bigint auto_increment primary key,
+    MODELO varchar(255) null,
+    FABRICANTE  varchar(255) null,
+    ANO varchar(255) null,
+    CODIGO bigint null,
+    COR_ID  bigint null
+);
+
+drop table carro;
 
 
-INSERT INTO cor (classe_cor, desc_cor, ano, lazzuril_code, uni_code, montadora)
-VALUES ('vermelho', 'vermelho metalico', '2015', 123, 321, 'ford');
 
-SELECT * FROM unicolor.cor;
+
+INSERT INTO carro (modelo, fabricante, ano, codigo, cor_id)
+VALUES ('gol', 'Wolksvagen', '2015', 123, 321);
+
+SELECT * FROM unicolor.carro;
