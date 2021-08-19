@@ -16,6 +16,10 @@ public class CarroService {
         return rep.findById(id).orElse(null);
     }
 
+    public Carro findByAno(String ano){
+        return rep.findByAno(ano).orElse(null);
+    }
+
     public List<Carro> findAll(){
         return rep.findAll();
     }
@@ -32,5 +36,9 @@ public class CarroService {
             return true;
         }
         return false;
+    }
+
+    public List<Carro> findCarroByFabricanteAndModelo(String fabricante, String modelo) {
+        return rep.findCarroByFabricanteAndModelo(fabricante, modelo);
     }
 }

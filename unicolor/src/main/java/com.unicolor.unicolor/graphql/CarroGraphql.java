@@ -15,8 +15,16 @@ public class CarroGraphql implements GraphQLQueryResolver, GraphQLMutationResolv
     @Autowired
     private CarroService carroService;
 
-    public Carro carro(Long id){
+    public Carro findCarroById(Long id){
         return carroService.findById(id);
+    }
+
+    public Carro findCarroByAno(String ano){
+        return carroService.findByAno(ano);
+    }
+
+    public List<Carro> findCarroByFabricanteAndModelo(String fabricante, String modelo){
+        return carroService.findCarroByFabricanteAndModelo(fabricante, modelo);
     }
 
     public List<Carro> carros(){

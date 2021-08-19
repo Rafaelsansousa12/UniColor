@@ -9,7 +9,9 @@ type Carro {
 
 extend type Query {
 
-    carro(id:ID):Carro
+    findCarroById(id:ID):Carro
+    findCarroByAno(ano:String):Carro
+    findCarroByFabricanteAndModelo(fabricante:String, modelo:String):[Carro]
     carros:[Carro]
 }
 
